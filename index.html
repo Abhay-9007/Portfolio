@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are here..</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        font-family: Arial, sans-serif;
+        
+        margin: 0;
+        padding: 0;
+    }
+    .schema{
+        position: absolute;
+        z-index: 20;
+    }
+    .front{
+        width: 100vw;
+        height: 90vh;
+    }
+    .mid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .end{
+        position: absolute;
+        margin-top: 2300px;
+        background-color: rgb(169, 161, 254);
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 0;
+    }
+    .project{
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 220px;
+        margin: 20px; 
+
+    }
+    .screenshort{
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 220px;
+        margin: 20px; 
+    }
+    .air{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(184, 255, 249);
+        width: 100vw;
+        height: 60vh;
+    }
+    .land{
+        background-color: rgb(42, 59, 40);
+        width: 100vw;
+        height: 40vh;
+    }
+    .clouds{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        width: 100vw;
+        margin-top: 0px;
+
+        z-index: 18;
+    }
+    .cloud1{
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 300px;
+        margin: 100px;
+
+        z-index: 18;
+
+        
+    }
+    .cloud2{
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 300px;
+        margin: 100px;
+
+        z-index: 18;
+
+    }
+    .namep{
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 40px;
+        margin: 20px; 
+    }
+    .names{
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 40px;
+        margin: 20px; 
+    }
+    .overlap{
+        background-color: black;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        width: 100vw;
+    }
+    .path{
+        margin-top: 300px;
+        background-color: rgb(154, 111, 111);
+
+        width: 500px;
+        height: 2700px;
+        z-index: 15;
+    }
+    .char{
+        background-color: rgb(193, 127, 255);
+        width: 100%;
+        height: 18%;
+    }
+    /*@keyframes slide {
+        0% {margin-top: 0px;}
+        50% {margin-top: 2400px;}
+        100% {margin-top: 0px;}
+    }*/
+</style>
+<body>
+    <div class="cont">
+        <div class="overlap">
+            <div class="path">
+                <div class="char">
+                </div>
+            </div>
+            <div class="end">
+                <div class="air"></div>
+                <div class="land"></div>
+            </div>
+        </div>
+        <div class="schema">
+            <div class="front">
+                <div class="welcome">
+                    <h1>Welcome</h1>
+                </div>
+                <div class="about">
+                    
+                </div>
+            </div>
+
+
+
+            <div class="mid">
+                <div class="projects">
+                    <div class="namep">Projects</div>
+                    <div id = "p1" class="project">p1</div>
+                    <div id = "p2" class="project">p2</div>
+                    <div id = "p3" class="project">p3</div>
+                    <div id = "p4" class="project">p4</div>
+                    <div id = "p5" class="project">p5</div>
+                    <div id = "p6" class="project">p6</div>
+                </div>
+                
+                <div class="screenshorts">
+                    <div class="names">Images</div>
+                    <div id = "s1" class="screenshort">s1</div>
+                    <div id = "s2" class="screenshort">s2</div>
+                    <div id = "s3" class="screenshort">s3</div>
+                    <div id = "s4" class="screenshort">s4</div>
+                    <div id = "s5" class="screenshort">s5</div>
+                    <div id = "s6" class="screenshort">s6</div>
+                </div>
+            </div>
+            <div class="clouds">
+                <div class="cloud1"></div>
+                <div class="cloud2"></div>
+            </div>
+
+
+
+            <!-- <div class="end">
+                <div class="air">
+                    <div class="cloud1"></div>
+                    <div class="cloud2"></div>
+                </div>
+                <div class="land"></div>
+            </div> -->
+        </div>
+
+
+
+        
+    </div>
+
+</body>
+<script>
+    const char = document.querySelector('.char');
+
+    window.addEventListener('scroll', () => {
+        let scrollY = window.scrollY;
+        if (scrollY > 2250){
+            scrollY = 2250;
+        }
+        const element = document.querySelector('.char');
+        element.style.transform = `translateY(${scrollY}px)`;
+        });
+
+    
+</script>
+</html>
