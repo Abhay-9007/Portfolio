@@ -1,5 +1,6 @@
 <!-- Started on 3rd Nov 2025 -->
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -89,15 +90,11 @@
     }
     boody.style.transform = `translateY(${scrollY}px)`;
 
-    const progress = scrollY / maxScroll;
-
-    // Smooth, less sensitive scaling
-    const baseHeight = 50; // starting height in px
-    i1.style.height = `${baseHeight + progress * 30}px`;
-    i2.style.height = `${baseHeight + progress * 60}px`;
-    i3.style.height = `${baseHeight + progress * 90}px`;
-    i4.style.height = `${baseHeight + progress * 120}px`;
-    i5.style.height = `${baseHeight + progress * 150}px`;
+    i1.style.bottom = `${scrollY * 0.03}px`;
+    i2.style.bottom = `${scrollY * 0.06}px`;
+    i3.style.bottom = `${scrollY * 0.09}px`;
+    i4.style.bottom = `${scrollY * 0.12}px`;
+    i5.style.bottom = `${scrollY * 0.15}px`;  
     //i5.style.height = `${scrollY * 0.01}%`;
 
   });
