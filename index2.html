@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+
+    }
+    .cont {
+        width: 600vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center; 
+    }
+    .img{
+        width : 90vw;
+        height : 90vh;
+        background-image: url('/img/1.png');
+    }
+</style>
+<body>
+    <div class="cont">
+        <div class="img"></div>
+    </div>
+</body>
+<script>
+    let img = document.querySelector('.img');
+    img.eventListener("clicked", () => {
+        alert("clicked!");
+    })
+</script>
+</html>
