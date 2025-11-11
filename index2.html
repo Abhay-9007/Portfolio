@@ -15,24 +15,35 @@
     .cont {
         width: 600vw;
         height: 100vh;
-        display: flex;
-        justify-content: center; 
     }
     .img{
         width : 90vw;
         height : 90vh;
         background-image: url('/img/1.png');
     }
+    .box{
+        background-image: 'url("https://www.shutterstock.com/image-vector/european-multi-role-fighter-jet-260nw-2418379413.jpg")';
+        position : absolute;
+        margin-left: 300px;
+        margin-top : 300px;
+        width : 100px;
+        height : 100px;
+        background-color: white;
+
+    }
 </style>
 <body>
     <div class="cont">
-        <div class="img"></div>
+        <div class="box"></div>
+        
     </div>
 </body>
 <script>
-    let img = document.querySelector('.img');
-    img.eventListener("clicked", () => {
-        alert("clicked!");
+    let box = document.querySelector('.box');
+    window.addEventListener("scroll", () => {
+        let scrollX = window.scrollX;
+        box.style.transform = `translateX(${scrollX}px)`;
     })
+
 </script>
 </html>
