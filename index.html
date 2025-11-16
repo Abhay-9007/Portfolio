@@ -1,4 +1,3 @@
-<!-- Commenting here to prove i do code daily and commiting on GIT... -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,31 +63,31 @@
     }
     .clouds{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        position: absolute;
+        gap : 1400px;
         width: 100vw;
-        margin-top: 0px;
+        height: 400px;
 
-        z-index: 18;
+        z-index: 15;
     }
     .cloud1{
         background-color: rgb(255, 255, 255);
-        width: 500px;
+        
+        width: 400px;
         height: 300px;
-        margin: 100px;
 
-        z-index: 18;
+        z-index: 16;
 
         
     }
     .cloud2{
         background-color: rgb(255, 255, 255);
-        width: 500px;
+        
+        width: 400px;
         height: 300px;
-        margin: 100px;
 
-        z-index: 18;
+        z-index: 16;
 
     }
     .namep{
@@ -109,7 +108,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 10;
+        z-index: 0;
         width: 100vw;
     }
     .path{
@@ -118,14 +117,42 @@
 
         width: 500px;
         height: 2700px;
-        z-index: 15;
+        z-index: 10;
     }
     .char{
         background-color: rgb(193, 127, 255);
         width: 100%;
         height: 18%;
     }
-    
+    .bot{
+        position: fixed;
+        bottom: 30px;
+        left: 93%;
+        background-color: rgb(255, 0, 0);
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+
+        z-index: 99;
+    }
+    .bot:hover{
+        background-color: rgb(0, 255, 0);
+        cursor: pointer;
+    }
+    .area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: rgb(59, 59, 59);
+        font-size: 40px;
+    }
+    /*@keyframes slide {
+        0% {margin-top: 0px;}
+        50% {margin-top: 2400px;}
+        100% {margin-top: 0px;}
+    }*/
 </style>
 <body>
     <div class="cont">
@@ -139,6 +166,8 @@
                 <div class="land"></div>
             </div>
         </div>
+
+
         <div class="schema">
             <div class="front">
                 <div class="welcome">
@@ -148,7 +177,6 @@
                     
                 </div>
             </div>
-
 
 
             <div class="mid">
@@ -177,22 +205,46 @@
                 <div class="cloud2"></div>
             </div>
         </div>
+
         
     </div>
 
+    <div class="bot">
+        <div class="area">
+            <span class="icon is-small">
+                <i class="fas fa-angle-up"></i>
+            </span>
+        </div>
+    </div>
+
+
 </body>
 <script>
-    const char = document.querySelector('.char');
-
+    
     window.addEventListener('scroll', () => {
         let scrollY = window.scrollY;
+        let gapValue = 1200;
         if (scrollY > 2250){
             scrollY = 2250;
         }
         const element = document.querySelector('.char');
         element.style.transform = `translateY(${scrollY}px)`;
-        });
 
+        const clouds = document.querySelector(".clouds");
+
+        if (scrollY >= 1000){
+            clouds.style.gap = `${Math.max(0,gapValue - scrollY / 3)}px`;
+        }
+        console.log(scrollY);
+        });
     
+    const bot = document.querySelector('.bot');
+    const area = document.querySelector('.area');
+    bot.addEventListener('click', () => {
+        //window.scrollTo(0,0);
+        //window.scrollTo({top: 0, behavior: 'smooth'});
+        area.style.display = '';
+
+    });
 </script>
 </html>
