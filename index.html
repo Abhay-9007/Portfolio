@@ -6,9 +6,11 @@
     <title>You are here..</title>
 </head>
 <style>
-    
     body{
         background-color: black;
+        background-Image: url("/img/bg3.jpg");
+        background-size: cover;
+        
         font-family: Arial, sans-serif;
         
         margin: 0;
@@ -30,7 +32,7 @@
     .end{
         position: absolute;
         margin-top: 2300px;
-        background-color: rgb(169, 161, 254);
+        
         width: 100vw;
         height: 100vh;
 
@@ -44,7 +46,6 @@
 
     }
     .screenshort{
-        background-color: rgb(255, 255, 255);
         width: 400px;
         height: 220px;
         margin: 20px; 
@@ -53,12 +54,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: rgb(184, 255, 249);
         width: 100vw;
         height: 60vh;
     }
     .land{
-        background-color: rgb(42, 59, 40);
+        background-image: url("img/es1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         width: 100vw;
         height: 40vh;
     }
@@ -69,34 +72,46 @@
         gap : 1400px;
         width: 100vw;
         height: 400px;
+
         z-index: 15;
     }
     .cloud1{
-        background-color: rgb(255, 255, 255); 
+        background-color: rgb(255, 255, 255);
+        
         width: 400px;
         height: 300px;
-        z-index: 16;        
+
+        z-index: 16;
+
+        
     }
     .cloud2{
         background-color: rgb(255, 255, 255);
+        
         width: 400px;
         height: 300px;
+
         z-index: 16;
+
     }
     .namep{
-        background-color: rgb(255, 255, 255);
         width: 400px;
         height: 40px;
         margin: 20px; 
     }
+    .namep p, .names p{
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+    }
     .names{
-        background-color: rgb(255, 255, 255);
         width: 400px;
         height: 40px;
         margin: 20px; 
     }
     .overlap{
-        background-color: black;
+        
         position: absolute;
         display: flex;
         justify-content: center;
@@ -106,29 +121,35 @@
     }
     .path{
         margin-top: 300px;
-        background-color: rgb(154, 111, 111);
-
         width: 500px;
         height: 2700px;
         z-index: 10;
     }
     .char{
-        background-color: rgb(193, 127, 255);
+        background-image: url("img/ss4.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         width: 100%;
         height: 18%;
     }
     .bot{
+        background-image: url("img/bot.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         position: fixed;
         bottom: 30px;
         left: 93%;
-        background-color: rgb(255, 0, 0);
         width: 70px;
         height: 70px;
         border-radius: 100%;
+
         z-index: 99;
     }
     .bot:hover{
-        background-color: rgb(0, 255, 0);
+        transform: scale(1.2);
+        transition: transform 0.3s;
         cursor: pointer;
     }
     .area{
@@ -140,6 +161,51 @@
         color: rgb(59, 59, 59);
         font-size: 40px;
     }
+    .welcome p{
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+        font-size: 70px;
+        font-weight: bolder;
+    }
+    .about p{
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    .screenshort:hover,.project:hover{
+        transform: scale(1.2);
+        transition: transform 0.3s;
+    }
+    #s1, #s2, #s3, #s4, #s5, #s6{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    #s1{
+        background-image: url("img/Profiles/leetcode.png");
+    }
+    #s2{
+        background-image: url("img/Profiles/codolio.png");
+    }
+    #s3{
+        background-image: url("img/Profiles/gfg.png");
+    }
+    #s4{
+        background-image: url("img/Profiles/codeforces.png");
+    }
+    #s5{
+        background-image: url("img/Profiles/github.png");
+    }
+    #s6{
+        background-image: url("img/Profiles/codechef.png");
+    }
+    /*@keyframes slide {
+        0% {margin-top: 0px;}
+        50% {margin-top: 2400px;}
+        100% {margin-top: 0px;}
+    }*/
 </style>
 <body>
     <div class="cont">
@@ -158,17 +224,19 @@
         <div class="schema">
             <div class="front">
                 <div class="welcome">
-                    <h1>Welcome</h1>
+                    <p>Welcome</p>
                 </div>
                 <div class="about">
-                    
+                    <p>I'm Abhay Pratap Singh, a Software Engineer from GLA University, Mathura. </p>
+                    <!-- <p>I'm not just passinate about Coding but, this is one of the thing I like to do. </p> -->
+                    <p>Scroll down to see my Projects and Screenshorts. </p>
                 </div>
             </div>
 
 
             <div class="mid">
                 <div class="projects">
-                    <div class="namep">Projects</div>
+                    <div class="namep"><p>Projects</p></div>
                     <div id = "p1" class="project">p1</div>
                     <div id = "p2" class="project">p2</div>
                     <div id = "p3" class="project">p3</div>
@@ -178,13 +246,13 @@
                 </div>
                 
                 <div class="screenshorts">
-                    <div class="names">Images</div>
-                    <div id = "s1" class="screenshort">s1</div>
-                    <div id = "s2" class="screenshort">s2</div>
-                    <div id = "s3" class="screenshort">s3</div>
-                    <div id = "s4" class="screenshort">s4</div>
-                    <div id = "s5" class="screenshort">s5</div>
-                    <div id = "s6" class="screenshort">s6</div>
+                    <div class="names"><p>Profiles</p></div>
+                    <div id = "s1" class="screenshort"></div>
+                    <div id = "s2" class="screenshort"></div>
+                    <div id = "s3" class="screenshort"></div>
+                    <div id = "s4" class="screenshort"></div>
+                    <div id = "s5" class="screenshort"></div>
+                    <div id = "s6" class="screenshort"></div>
                 </div>
             </div>
             <div class="clouds">
@@ -228,6 +296,8 @@
     const bot = document.querySelector('.bot');
     const area = document.querySelector('.area');
     bot.addEventListener('click', () => {
+        //window.scrollTo(0,0);
+        //window.scrollTo({top: 0, behavior: 'smooth'});
         area.style.display = '';
 
     });
