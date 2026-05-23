@@ -1,0 +1,63 @@
+@plugin "tailwindcss-motion";
+@import "tailwindcss";
+
+body{
+    background: #000;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+    display: none;
+  } 
+}
+  /* IE, Edge, and Firefox
+  -ms-overflow-style: none;  /* IE and Edge */
+  /* scrollbar-width: none; */ */
+
+
+.project_info{
+    @apply text-2xl p-2 pl-5;
+}
+
+.slider_lang{
+    @apply hover:scale-[90%] border-red-500 border-3 w-[200px] text-center font-bold text-2xl p-5 m-4 px-6 rounded-3xl;
+}
+
+
+.card_id{
+    @apply rounded-full h-20 w-20 bg-pink-500 flex items-center justify-center text-4xl font-bold text-green-500;
+}
+
+.project_Sticker{
+    @apply sticky top-0 h-screen flex flex-row bg-black;
+}
+
+.profile_Sticker{
+    @apply sticky top-0 h-screen flex flex-col bg-black;
+}
+
+.twinkle{
+    @apply h-2/10 w-1/10 z-0;
+}
+
+.connectcss{
+    @apply hover:text-cyan-500 p-2 font-bold text-2xl;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+/* 
+.slider_lang{
+    @apply ;
+} */
