@@ -11,3 +11,12 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 # Portfolio
+
+# Things to Add more..
+  1. More Project's
+    1. GAMBLE
+    2. Link if LISA
+    3. Naive Projects
+  2. change cursor when it hovers on a link
+  3. projects are kinda hidden.
+  4. Card Share and Download feature...
