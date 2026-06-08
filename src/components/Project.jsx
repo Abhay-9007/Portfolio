@@ -96,7 +96,7 @@ function Project() {
             
         
                 <div
-                onClick={() => window.open("https://web-d2.vercel.app/")}   
+                onClick={() => window.open("https://web-d2-git-main-abhay-9007s-projects.vercel.app/")}   
                 className="absolute bottom-[-320px] left-30 w-[90vw] h-[50vh] hover: translate-transform duration-1000 hover:-translate-y-[320px]">
                     <p className="text-red-500 font-bold text-7xl">F1 Test</p>
 
